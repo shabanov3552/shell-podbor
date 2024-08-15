@@ -1,0 +1,231 @@
+.dropdown {
+   position: relative;
+   z-index: 5;
+}
+
+.dropdown._dd-active {
+   z-index: 50;
+}
+
+.dropdown__button {
+   position: relative;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.dropdown__button::after {
+   content: "";
+   display: block;
+   width: 24px;
+   height: 24px;
+   background: url("../img/select-grey.svg") center no-repeat;
+   transition: all 0.3s ease 0s;
+}
+
+._dd-active .dropdown__button::after {
+   transform: rotate(-180deg);
+}
+
+.dropdown__block {
+   position: absolute;
+   transition: all 0.3s ease 0s;
+   opacity: 0;
+   visibility: hidden;
+}
+
+._dd-active .dropdown__block {
+   opacity: 1;
+   visibility: visible;
+}
+
+.tolerances .catalogue_content {
+   position: relative;
+   padding-top: 30px;
+   margin-left: 0;
+   margin-right: 0;
+}
+
+.tolerances .sort_row {
+   margin-top: 50px;
+   padding-right: 8.4%;
+   margin-bottom: 0;
+}
+
+.tolerances .catalogue_content .pagination {
+   bottom: -20px;
+}
+
+.tolerances {}
+
+.tolerances__wrapper {}
+
+.tolerances__title {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 145%;
+   color: #000;
+   margin-bottom: 19px;
+}
+
+.tolerances__filters {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   row-gap: 9px;
+}
+
+.tolerances__filter-block {}
+
+.tolerances__filter-block.selected {}
+
+.selected .tolerances__filter-button {
+   background: #ececec;
+   color: #000;
+}
+
+._dd-active .tolerances__filter-button {
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.tolerances__filter-button {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   gap: 8px;
+   height: 62px;
+   padding-left: 21px;
+   padding-right: 12px;
+   font-size: 16px;
+   color: #7f7f7f;
+   background: #fff;
+   border: 1px solid #cfd2cc;
+}
+
+.brands-filter .tolerances__filter-button {
+   display: grid;
+   grid-template-columns: 1fr repeat(2, auto);
+}
+
+.tolerances__filter-button img {
+   height: 40px;
+   width: 40px;
+   object-fit: contain;
+}
+
+.tolerances__filter-list {
+   background: #fff;
+   border: 1px solid #cfd2cc;
+   width: 100%;
+   max-height: 400px;
+   overflow: auto;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.tolerances__filter-list::-webkit-scrollbar {
+   width: 10px;
+}
+
+.tolerances__filter-list::-webkit-scrollbar-thumb {
+   border-radius: 0px;
+   background: #d8d8d8;
+}
+
+.tolerances__filter-item:hover {
+   background: #ececec;
+}
+
+.tolerances__filter-item {
+   align-items: flex-start;
+}
+
+.tolerances__submit {
+   background: #e10034;
+   border: none;
+   color: #fff;
+   font-size: 16px;
+   text-align: center;
+   height: 62px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   grid-column: 5;
+}
+
+.tolerances__submit:hover {
+   text-decoration: none;
+   color: #fff;
+   background: #b00029;
+   transition: all 0.3s ease 0s;
+}
+
+.tolerances__clear {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 150%;
+   color: #e10034;
+   border: none;
+   display: inline-flex;
+   border-bottom: 1px dashed #e10034;
+   transition: all 0.3s ease 0s;
+   grid-column: 5;
+   justify-self: center;
+   align-self: center;
+}
+
+.tolerances__clear:hover {
+   text-decoration: none;
+   color: #b00029;
+   border-bottom: 1px dashed #b00029;
+}
+
+.filter-item {}
+
+.check-data {}
+
+.checkbox-data {}
+
+.tolerances__filter-item .checkbox-data {}
+
+.tolerances__filter-item .data-span {
+   font-weight: 400;
+   overflow-wrap: anywhere;
+}
+
+.data-span {}
+
+@media (max-width:1199.98px) {
+   .tolerances__filters {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .tolerances__submit,
+   .tolerances__clear {
+      grid-column: 3;
+   }
+}
+
+@media (max-width:768.98px) {
+   .tolerances__filters {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .tolerances__submit,
+   .tolerances__clear {
+      grid-column: 2;
+   }
+}
+
+@media (max-width:576.98px) {
+   .tolerances__filters {
+      grid-template-columns: 1fr;
+   }
+
+   .tolerances__submit,
+   .tolerances__clear {
+      grid-column: auto;
+   }
+
+   .tolerances__wrapper:not(:last-child) {
+      margin-bottom: 30px;
+   }
+}
